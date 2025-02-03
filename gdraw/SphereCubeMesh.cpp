@@ -1,3 +1,4 @@
+#include "SphereCubeMesh.hpp"
 //
 // Created by Gaëtan Blaise-Cazalet on 28/01/2025.
 //
@@ -12,7 +13,7 @@
 
 namespace gdraw
 {
-    SphereCubeMesh::SphereCubeMesh(Renderer* renderer_) : renderer{renderer_} {
+    SphereCubeMesh::SphereCubeMesh(Renderer* renderer_, float radius) : renderer{ renderer_ }, radius{ radius }{
         Build();
         // Create the vertex buffer
         SDL_GPUBufferCreateInfo vertexBufferCreateInfo =

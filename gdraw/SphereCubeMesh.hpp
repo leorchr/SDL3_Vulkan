@@ -23,7 +23,7 @@ namespace gdraw
     class SphereCubeMesh
     {
     public:
-        explicit SphereCubeMesh(Renderer* renderer_);
+        explicit SphereCubeMesh(Renderer* renderer_, float radius);
         void Load();
         void Bind();
         void Draw();

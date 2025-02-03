@@ -42,7 +42,7 @@ namespace gdraw {
             SDL_Log("AcquireGPUCommandBuffer failed: %s", SDL_GetError());
         }
 
-        if (!SDL_AcquireGPUSwapchainTexture(cmdBuffer, renderWindow, &swapchainTexture, nullptr, nullptr)) {
+        if (!SDL_WaitAndAcquireGPUSwapchainTexture(cmdBuffer, renderWindow, &swapchainTexture, nullptr, nullptr)) {
             SDL_Log("AcquireGPUSwapchainTexture failed: %s", SDL_GetError());
         }
 

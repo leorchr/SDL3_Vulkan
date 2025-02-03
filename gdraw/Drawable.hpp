@@ -1,7 +1,3 @@
-//
-// Created by gaetz on 03/02/2025.
-//
-
 #ifndef GDRAW_DRAWABLE_HPP
 #define GDRAW_DRAWABLE_HPP
 
@@ -28,4 +24,4 @@ namespace gdraw {
     };
 }
 
-#endif //GDRAW_DRAWABLE_HPP
+#endif

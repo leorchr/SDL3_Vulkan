@@ -1,7 +1,3 @@
-//
-// Created by Gaëtan Blaise-Cazalet on 15/01/2025.
-//
-
 #include "Material.hpp"
 #include <SDL3/SDL.h>
 #include "GpuUploader.hpp"

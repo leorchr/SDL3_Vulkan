@@ -1,7 +1,4 @@
-//
-// Created by Gaëtan Blaise-Cazalet on 31/01/2025.
-//
-
+#pragma once
 #include "SphereCube.hpp"
 
 #include <VertexTypes.hpp>

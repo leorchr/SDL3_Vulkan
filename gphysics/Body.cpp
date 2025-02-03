@@ -25,21 +25,20 @@ namespace gphysics {
         position{ Vec::zero },
         orientation{ Quat::identity },
         shape{ nullptr },
-        drawable{ nullptr } {
-
-    }
+        drawable{ nullptr } {}
 
     void Body::Update(f32 dt) {
-        linearVelocity += Vec(0, -10, 0) * dt;
 
-        float mass = 1.0f / inverseMass;
-        // Gravity needs to be an impulse I
-        // I == dp, so F == dp/dt <=> dp = F * dt
-        // <=> I = F * dt <=> I = m * g * dt
-        Vec impulseGravity = Vec(0, -10, 0) * mass * dt;
-        ApplyImpulseLinear(impulseGravity);
+        if (inverseMass != 0) {
+            float mass = 1.0f / inverseMass;
+            // Gravity needs to be an impulse I
+            // I == dp, so F == dp/dt <=> dp = F * dt
+            // <=> I = F * dt <=> I = m * g * dt
+            Vec impulseGravity = Vec(0, -10, 0) * mass * dt;
+            ApplyImpulseLinear(impulseGravity);
+            position += linearVelocity * dt;
+        }
 
-        position += linearVelocity * dt;
 
         drawable->setTransform(Mat4::CreateTranslation(position));
     }

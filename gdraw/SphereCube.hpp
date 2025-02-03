@@ -1,7 +1,4 @@
-//
-// Created by Gaëtan Blaise-Cazalet on 31/01/2025.
-//
-
+#pragma once
 #ifndef GDRAW_SPHERECUBE_HPP
 #define GDRAW_SPHERECUBE_HPP
 
@@ -17,7 +14,7 @@ namespace gdraw
     class SphereCube : public Drawable
     {
     public:
-        explicit SphereCube(Renderer& renderer_) : material(&renderer_), mesh(&renderer_) {}
+        SphereCube(Renderer& renderer_, float radius) : material(&renderer_), mesh(&renderer_, radius) {}
 
         void Load();
         void Update(f32 dt);
