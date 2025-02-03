@@ -18,6 +18,7 @@ namespace gmath {
     public:
         Vec() = default;
         Vec(real x, real y, real z) : x(x), y(y), z(z), w(1) {}
+        Vec(real x, real y, real z, real w) : x(x), y(y), z(z), w(w) {}
 
         static const Vec zero;
         static const Vec one;

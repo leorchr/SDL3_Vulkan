@@ -1,6 +1,5 @@
-//
-// Created by gaetz on 02/02/2025.
-//
+#include <Vec.hpp>
+using gmath::Vec;
 
 #ifndef GPHYSICS_SHAPE_HPP
 #define GPHYSICS_SHAPE_HPP
@@ -14,6 +13,10 @@ namespace gphysics {
         };
 
         [[nodiscard]] virtual ShapeType GetType() const = 0;
+        virtual Vec GetCenterOfMass() const { return centerOfMass; }
+
+    protected:
+        Vec centerOfMass;
     };
 }
 

@@ -27,8 +27,6 @@ namespace gdraw
     private:
         SphereCubeMaterial material;
         SphereCubeMesh mesh;
-        Mat4 transform { Mat4::identity };
-
         void Bind();
     };
 }

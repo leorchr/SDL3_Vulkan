@@ -134,6 +134,12 @@ build physics-with-SDL3.exe: CXX_EXECUTABLE_LINKER__physics-with-SDL3_Debug CMak
 
 
 #############################################
+# Utility command for copy_resources
+
+build copy_resources: phony CMakeFiles\copy_resources
+
+
+#############################################
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
@@ -154,6 +160,13 @@ build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build rebuild_cache: phony CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Custom command for CMakeFiles\copy_resources
+
+build CMakeFiles\copy_resources | ${cmake_ninja_workdir}CMakeFiles\copy_resources: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\leo.rocher\Desktop\SDL3_Vulkan\out\build\x64-Debug && C:\VisualStudio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E copy_directory C:/Users/leo.rocher/Desktop/SDL3_Vulkan/Content C:/Users/leo.rocher/Desktop/SDL3_Vulkan/out/build/x64-Debug/Content"
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -2955,6 +2968,15 @@ build gdraw\CMakeFiles\gdraw.dir\CubeMesh.cpp.obj: CXX_COMPILER__gdraw_unscanned
   TARGET_COMPILE_PDB = gdraw\CMakeFiles\gdraw.dir\gdraw.pdb
   TARGET_PDB = gdraw\gdraw.pdb
 
+build gdraw\CMakeFiles\gdraw.dir\Drawable.cpp.obj: CXX_COMPILER__gdraw_unscanned_Debug C$:\Users\leo.rocher\Desktop\SDL3_Vulkan\gdraw\Drawable.cpp || cmake_object_order_depends_target_gdraw
+  DEFINES = -DDEBUG=1
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd
+  INCLUDES = -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gdraw -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gdraw\SDL3 -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gdraw\gplatform -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gdraw\gmath -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gplatform -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\out\build\x64-Debug\_deps\sdl3-build\include-revision -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\out\build\x64-Debug\_deps\sdl3-src\include -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gmath
+  OBJECT_DIR = gdraw\CMakeFiles\gdraw.dir
+  OBJECT_FILE_DIR = gdraw\CMakeFiles\gdraw.dir
+  TARGET_COMPILE_PDB = gdraw\CMakeFiles\gdraw.dir\gdraw.pdb
+  TARGET_PDB = gdraw\gdraw.pdb
+
 build gdraw\CMakeFiles\gdraw.dir\GpuUploader.cpp.obj: CXX_COMPILER__gdraw_unscanned_Debug C$:\Users\leo.rocher\Desktop\SDL3_Vulkan\gdraw\GpuUploader.cpp || cmake_object_order_depends_target_gdraw
   DEFINES = -DDEBUG=1
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd
@@ -3053,7 +3075,7 @@ build gdraw\CMakeFiles\gdraw.dir\Window.cpp.obj: CXX_COMPILER__gdraw_unscanned_D
 #############################################
 # Link the static library gdraw\gdraw.lib
 
-build gdraw\gdraw.lib: CXX_STATIC_LIBRARY_LINKER__gdraw_Debug gdraw\CMakeFiles\gdraw.dir\Cube.cpp.obj gdraw\CMakeFiles\gdraw.dir\CubeMaterial.cpp.obj gdraw\CMakeFiles\gdraw.dir\CubeMesh.cpp.obj gdraw\CMakeFiles\gdraw.dir\GpuUploader.cpp.obj gdraw\CMakeFiles\gdraw.dir\Material.cpp.obj gdraw\CMakeFiles\gdraw.dir\Quad.cpp.obj gdraw\CMakeFiles\gdraw.dir\QuadMaterial.cpp.obj gdraw\CMakeFiles\gdraw.dir\QuadMesh.cpp.obj gdraw\CMakeFiles\gdraw.dir\Renderer.cpp.obj gdraw\CMakeFiles\gdraw.dir\SphereCube.cpp.obj gdraw\CMakeFiles\gdraw.dir\SphereCubeMaterial.cpp.obj gdraw\CMakeFiles\gdraw.dir\SphereCubeMesh.cpp.obj gdraw\CMakeFiles\gdraw.dir\Window.cpp.obj || _deps\sdl3-build\SDL3.dll gmath\gmath.lib gplatform\gplatform.lib
+build gdraw\gdraw.lib: CXX_STATIC_LIBRARY_LINKER__gdraw_Debug gdraw\CMakeFiles\gdraw.dir\Cube.cpp.obj gdraw\CMakeFiles\gdraw.dir\CubeMaterial.cpp.obj gdraw\CMakeFiles\gdraw.dir\CubeMesh.cpp.obj gdraw\CMakeFiles\gdraw.dir\Drawable.cpp.obj gdraw\CMakeFiles\gdraw.dir\GpuUploader.cpp.obj gdraw\CMakeFiles\gdraw.dir\Material.cpp.obj gdraw\CMakeFiles\gdraw.dir\Quad.cpp.obj gdraw\CMakeFiles\gdraw.dir\QuadMaterial.cpp.obj gdraw\CMakeFiles\gdraw.dir\QuadMesh.cpp.obj gdraw\CMakeFiles\gdraw.dir\Renderer.cpp.obj gdraw\CMakeFiles\gdraw.dir\SphereCube.cpp.obj gdraw\CMakeFiles\gdraw.dir\SphereCubeMaterial.cpp.obj gdraw\CMakeFiles\gdraw.dir\SphereCubeMesh.cpp.obj gdraw\CMakeFiles\gdraw.dir\Window.cpp.obj || _deps\sdl3-build\SDL3.dll gmath\gmath.lib gplatform\gplatform.lib
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = gdraw\CMakeFiles\gdraw.dir
@@ -3127,7 +3149,7 @@ build physics-with-SDL3: phony physics-with-SDL3.exe
 #############################################
 # Folder: C:/Users/leo.rocher/Desktop/SDL3_Vulkan/out/build/x64-Debug
 
-build all: phony physics-with-SDL3.exe _deps\sdl3-build\all gplatform\all gmath\all gphysics\all gdraw\all
+build all: phony physics-with-SDL3.exe copy_resources _deps\sdl3-build\all gplatform\all gmath\all gphysics\all gdraw\all
 
 # =============================================================================
 

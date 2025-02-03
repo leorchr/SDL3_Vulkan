@@ -85,3 +85,7 @@ add_executable(${PROJECT_NAME} ${graphics-with-SDL3_SOURCES})
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${SDL3_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} SDL3::SDL3 gplatform gphysics gdraw)
+
+add_custom_target(copy_resources ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${PROJECT_SOURCE_DIR}/Content ${CMAKE_BINARY_DIR}/Content
+)

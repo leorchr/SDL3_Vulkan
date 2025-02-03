@@ -47,6 +47,8 @@ namespace gmath {
 
         static Mat4 CreateTranslation(f32 x, f32 y, f32 z);
 
+        static Mat4 CreateTranslation(Vec pos);
+
         static Mat4 CreateScale(float xScale, float yScale, float zScale);
 
         static Mat4 CreateScale(const Vec &scaleVector);

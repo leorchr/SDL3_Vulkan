@@ -1,7 +1,3 @@
-//
-// Created by Gaëtan Blaise-Cazalet on 28/01/2024.
-//
-
 #ifndef SCENE02QUAD_HPP
 #define SCENE02QUAD_HPP
 

@@ -1,7 +1,3 @@
-//
-// Created by Gaëtan Blaise-Cazalet on 15/01/2025.
-//
-
 #ifndef GDRAW_QUAD_HPP
 #define GDRAW_QUAD_HPP
 

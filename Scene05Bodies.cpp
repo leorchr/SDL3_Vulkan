@@ -6,11 +6,29 @@ using gphysics::ShapeSphere;
 
 
 void Scene05Bodies::Load(Renderer& renderer) {
-    auto shape = new ShapeSphere(1.0f);
+
+
+
     auto sphere = new SphereCube(renderer);
     sphere->Load();
 
-    bodies.emplace_back(Vec::zero, Quat::identity, shape, sphere);
+    Body body;
+    body.position = Vec(0, 10, 0);
+    body.orientation = Quat(0, 0, 0, 1);
+    body.shape = new ShapeSphere(1.0f);
+    body.drawable = sphere;
+    body.inverseMass = 1.0f;
+    bodies.push_back(body);
+
+    auto sphere2 = new SphereCube(renderer);
+    sphere2->Load();
+    Body earth;
+    earth.position = Vec(0, -1000, 0);
+    earth.orientation = Quat(0, 0, 0, 1);
+    earth.shape = new ShapeSphere(1000.0f);
+    earth.drawable = sphere2;
+    earth.inverseMass = 0.0f;
+    bodies.push_back(earth);
 }
 
 bool Scene05Bodies::Update(float dt) {

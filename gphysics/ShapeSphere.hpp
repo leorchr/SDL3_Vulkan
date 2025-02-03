@@ -1,7 +1,3 @@
-//
-// Created by gaetz on 03/02/2025.
-//
-
 #ifndef GPHYSICS_SHAPESPHERE_HPP
 #define GPHYSICS_SHAPESPHERE_HPP
 
@@ -12,6 +8,7 @@ namespace gphysics {
     public:
         ShapeSphere(float radiusP) : radius(radiusP)
         {
+            centerOfMass = Vec::zero;
         }
 
         ShapeType GetType() const override { return ShapeType::SHAPE_SPHERE; }

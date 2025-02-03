@@ -1,7 +1,3 @@
-//
-// Created by gaetz on 28/01/2025.
-//
-
 #include "QuadMaterial.hpp"
 #include <SDL3/SDL.h>
 #include "Renderer.hpp"

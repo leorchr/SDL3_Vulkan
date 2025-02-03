@@ -27,17 +27,25 @@ namespace gphysics {
     {
     public:
         Body(const Vec &position_, const Quat &orientation_, Shape* shape_, Drawable* drawable_);
+        Body();
 
         void Update(f32 dt);
 
         Vec position;
         Quat orientation;
+        Vec linearVelocity;
+        f32 inverseMass;
         Shape* shape { nullptr };
         Drawable* drawable { nullptr };
 
+        Vec GetCenterOfMassWorldSpace() const;
+        Vec GetCenterOfMassBodySpace() const;
+        Vec WorldSpaceToBodySpace(const Vec& worldPoint);
+        Vec BodySpaceToWorldSpace(const Vec& bodyPoint);
+
+        void ApplyImpulseLinear(const Vec& impulse);
+
     };
 }
-
-
 
 #endif //GPHYSICS_BODY_HPP

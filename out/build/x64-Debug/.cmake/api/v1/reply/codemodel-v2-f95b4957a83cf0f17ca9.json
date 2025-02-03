@@ -23,7 +23,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						7
+						3,
+						8
 					]
 				},
 				{
@@ -55,7 +56,7 @@
 					"source" : "gplatform",
 					"targetIndexes" : 
 					[
-						6
+						7
 					]
 				},
 				{
@@ -70,7 +71,7 @@
 					"source" : "gmath",
 					"targetIndexes" : 
 					[
-						4
+						5
 					]
 				},
 				{
@@ -85,7 +86,7 @@
 					"source" : "gphysics",
 					"targetIndexes" : 
 					[
-						5
+						6
 					]
 				},
 				{
@@ -100,7 +101,7 @@
 					"source" : "gdraw",
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				}
 			],
@@ -123,7 +124,8 @@
 					"name" : "physics-with-SDL3",
 					"targetIndexes" : 
 					[
-						7
+						3,
+						8
 					]
 				},
 				{
@@ -149,7 +151,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						6
+						7
 					]
 				},
 				{
@@ -161,7 +163,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						4
+						5
 					]
 				},
 				{
@@ -173,7 +175,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						5
+						6
 					]
 				},
 				{
@@ -185,7 +187,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				}
 			],
@@ -213,9 +215,16 @@
 					"projectIndex" : 1
 				},
 				{
+					"directoryIndex" : 0,
+					"id" : "copy_resources::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-copy_resources-Debug-ceb74c8ae4e4dfe0104b.json",
+					"name" : "copy_resources",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 5,
 					"id" : "gdraw::@cf48723061fb754fad4c",
-					"jsonFile" : "target-gdraw-Debug-b13e65a05d1804234afc.json",
+					"jsonFile" : "target-gdraw-Debug-daa4f102ab563bccb7ee.json",
 					"name" : "gdraw",
 					"projectIndex" : 5
 				},
@@ -229,7 +238,7 @@
 				{
 					"directoryIndex" : 4,
 					"id" : "gphysics::@1d4de354891563cc7e5c",
-					"jsonFile" : "target-gphysics-Debug-65693b7b125360732af7.json",
+					"jsonFile" : "target-gphysics-Debug-b1290f111942b7d93e51.json",
 					"name" : "gphysics",
 					"projectIndex" : 4
 				},
@@ -243,7 +252,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "physics-with-SDL3::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-physics-with-SDL3-Debug-25a238c59ea5b2916e0c.json",
+					"jsonFile" : "target-physics-with-SDL3-Debug-347ebe6264397209c7e7.json",
 					"name" : "physics-with-SDL3",
 					"projectIndex" : 0
 				}

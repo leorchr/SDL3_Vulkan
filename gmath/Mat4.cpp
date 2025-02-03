@@ -1,4 +1,5 @@
 #include "Mat4.hpp"
+#include "Mat4.hpp"
 #include "Mat3.hpp"
 #include <cstdlib>
 
@@ -69,6 +70,17 @@ namespace gmath {
         retVal.y = Vec(m4, m5, m3).Magnitude();
         retVal.z = Vec(m8, m9, m10).Magnitude();
         return retVal;
+    }
+
+    Mat4 Mat4::CreateTranslation(Vec pos)
+    {
+        return Mat4
+        {
+                1, 0, 0, 0,
+                0, 1, 0, 0,
+                0, 0, 1, 0,
+                pos.x, pos.y, pos.z, 1
+        };
     }
 
     // Create a scale matrix with x, y, and z scales
