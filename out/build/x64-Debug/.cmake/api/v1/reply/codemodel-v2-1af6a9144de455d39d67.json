@@ -1,0 +1,264 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "_deps/sdl3-build",
+					"jsonFile" : "directory-_deps.sdl3-build-Debug-36f84d8db8fa06047cec.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "out/build/x64-Debug/_deps/sdl3-src",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"build" : "gplatform",
+					"jsonFile" : "directory-gplatform-Debug-8c1f8e6b70c892cef9b2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "gplatform",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "gmath",
+					"jsonFile" : "directory-gmath-Debug-2687fe83c638c2329588.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "gmath",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "gphysics",
+					"jsonFile" : "directory-gphysics-Debug-fe2790043391065fb269.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "gphysics",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "gdraw",
+					"jsonFile" : "directory-gdraw-Debug-69b66618f1e8d3aec6a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "gdraw",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "physics-with-SDL3",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "SDL3",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "gplatform",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "gmath",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "gphysics",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "gdraw",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3-shared::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL3-shared-Debug-f875032064ba4b3aa1f4.json",
+					"name" : "SDL3-shared",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3_test::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL3_test-Debug-0c6574b51877474ffe8e.json",
+					"name" : "SDL3_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL_uclibc::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL_uclibc-Debug-f42c0365e76c225f6dba.json",
+					"name" : "SDL_uclibc",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "gdraw::@cf48723061fb754fad4c",
+					"jsonFile" : "target-gdraw-Debug-b13e65a05d1804234afc.json",
+					"name" : "gdraw",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gmath::@3c8ce4b63bf75f92a33b",
+					"jsonFile" : "target-gmath-Debug-52938c20d6a2bba4872d.json",
+					"name" : "gmath",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "gphysics::@1d4de354891563cc7e5c",
+					"jsonFile" : "target-gphysics-Debug-65693b7b125360732af7.json",
+					"name" : "gphysics",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gplatform::@30299ba8977fae0cdfc1",
+					"jsonFile" : "target-gplatform-Debug-b2485fa7cd5e6d0a9a2d.json",
+					"name" : "gplatform",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "physics-with-SDL3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-physics-with-SDL3-Debug-25a238c59ea5b2916e0c.json",
+					"name" : "physics-with-SDL3",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/leo.rocher/Desktop/SDL3_Vulkan/out/build/x64-Debug",
+		"source" : "C:/Users/leo.rocher/Desktop/SDL3_Vulkan"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
