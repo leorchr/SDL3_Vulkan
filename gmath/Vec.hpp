@@ -76,7 +76,7 @@ namespace gmath {
         real ScalarProduct(const Vec &v) const { return x * v.x + y * v.y + z * v.z; }
 
         /** Calculate and return the scalar product of this vector with the given vector. */
-        real Dot(const Vec &v) { return x * v.x + y * v.y + z * v.z; }
+        real Dot(const Vec &v) const { return x * v.x + y * v.y + z * v.z; }
 
         /** Calculate and return the scalar product of this vector with the given vector. */
         real operator*(const Vec &v) const { return x * v.x + y * v.y + z * v.z; }
