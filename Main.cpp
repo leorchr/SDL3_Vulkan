@@ -1,9 +1,3 @@
-//
-// Created by Gaëtan Blaise-Cazalet on 13/01/2024.
-//
-
-#include <iostream>
-#include "SDL3/SDL_main.h"
 #include "Time.hpp"
 #include "Window.hpp"
 #include "Renderer.hpp"
@@ -11,6 +5,8 @@
 #include "Scene02Quad.hpp"
 #include "Scene03Cube.hpp"
 #include "Scene05Bodies.hpp"
+#include <SDL3/SDL_main.h>
+#include <iostream>
 
 using namespace std;
 

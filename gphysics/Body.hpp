@@ -31,6 +31,8 @@ namespace gphysics {
 
         void Update(f32 dt);
 
+        void ApplyWeight(f32 dt);
+
         Vec position;
         Quat orientation;
         Vec linearVelocity;

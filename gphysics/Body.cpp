@@ -19,7 +19,12 @@ namespace gphysics {
         drawable{ nullptr } {}
 
     void Body::Update(f32 dt) {
+        position += linearVelocity * dt;
+        drawable->setTransform(Mat4::CreateTranslation(position));
+    }
 
+    void Body::ApplyWeight(f32 dt)
+    {
         if (inverseMass != 0) {
             float mass = 1.0f / inverseMass;
             // Gravity needs to be an impulse I
@@ -27,11 +32,7 @@ namespace gphysics {
             // <=> I = F * dt <=> I = m * g * dt
             Vec impulseGravity = Vec(0, -10, 0) * mass * dt;
             ApplyImpulseLinear(impulseGravity);
-            position += linearVelocity * dt;
         }
-
-
-        drawable->setTransform(Mat4::CreateTranslation(position));
     }
 
 

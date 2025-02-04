@@ -2,8 +2,11 @@
 #include "SphereCube.hpp"
 #include "ShapeSphere.hpp"
 #include "Intersections.hpp"
+#include "Contact.hpp"
 
 using gphysics::ShapeSphere;
+using gphysics::Intersections;
+using gphysics::Contact;
 
 
 void Scene05Bodies::Load(Renderer& renderer) {
@@ -34,6 +37,12 @@ void Scene05Bodies::Load(Renderer& renderer) {
 
 bool Scene05Bodies::Update(float dt) {
     bool stillRunning = ManageInput(inputState);
+
+    for (int i = 0; i < bodies.size(); ++i)
+    {
+        bodies[i].ApplyWeight(dt);
+    }
+        
     // Collision checks
     for (int i = 0; i < bodies.size(); ++i)
     {
@@ -43,10 +52,10 @@ bool Scene05Bodies::Update(float dt) {
             Body& bodyB = bodies[j];
             if (bodyA.inverseMass == 0.0f && bodyB.inverseMass == 0.0f)
                 continue;
-            if (Intersections::Intersect(bodyA, bodyB))
+            Contact contact;
+            if (Intersections::Intersect(bodyA, bodyB, contact))
             {
-                bodyA.linearVelocity = Vec::zero;
-                bodyB.linearVelocity = Vec::zero;
+                Contact::ResolveContact(contact);
             }
         }
     }

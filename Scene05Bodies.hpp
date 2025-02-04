@@ -1,7 +1,3 @@
-//
-// Created by Gaëtan Blaise-Cazalet on 31/01/2024.
-//
-
 #ifndef SCENE05BODIES_HPP
 #define SCENE05BODIES_HPP
 

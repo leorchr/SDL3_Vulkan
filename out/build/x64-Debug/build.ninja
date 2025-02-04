@@ -2859,6 +2859,15 @@ build gphysics\CMakeFiles\gphysics.dir\Body.cpp.obj: CXX_COMPILER__gphysics_unsc
   TARGET_COMPILE_PDB = gphysics\CMakeFiles\gphysics.dir\gphysics.pdb
   TARGET_PDB = gphysics\gphysics.pdb
 
+build gphysics\CMakeFiles\gphysics.dir\Contact.cpp.obj: CXX_COMPILER__gphysics_unscanned_Debug C$:\Users\leo.rocher\Desktop\SDL3_Vulkan\gphysics\Contact.cpp || cmake_object_order_depends_target_gphysics
+  DEFINES = -DDEBUG=1
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd
+  INCLUDES = -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gphysics -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gphysics\gmath -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gphysics\gplatform -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gphysics\gdraw -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gplatform -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gmath -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gdraw -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gdraw\SDL3 -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gdraw\gplatform -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\gdraw\gmath -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\out\build\x64-Debug\_deps\sdl3-build\include-revision -IC:\Users\leo.rocher\Desktop\SDL3_Vulkan\out\build\x64-Debug\_deps\sdl3-src\include
+  OBJECT_DIR = gphysics\CMakeFiles\gphysics.dir
+  OBJECT_FILE_DIR = gphysics\CMakeFiles\gphysics.dir
+  TARGET_COMPILE_PDB = gphysics\CMakeFiles\gphysics.dir\gphysics.pdb
+  TARGET_PDB = gphysics\gphysics.pdb
+
 build gphysics\CMakeFiles\gphysics.dir\Intersections.cpp.obj: CXX_COMPILER__gphysics_unscanned_Debug C$:\Users\leo.rocher\Desktop\SDL3_Vulkan\gphysics\Intersections.cpp || cmake_object_order_depends_target_gphysics
   DEFINES = -DDEBUG=1
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd
@@ -2903,7 +2912,7 @@ build gphysics\CMakeFiles\gphysics.dir\ShapeSphere.cpp.obj: CXX_COMPILER__gphysi
 #############################################
 # Link the static library gphysics\gphysics.lib
 
-build gphysics\gphysics.lib: CXX_STATIC_LIBRARY_LINKER__gphysics_Debug gphysics\CMakeFiles\gphysics.dir\Body.cpp.obj gphysics\CMakeFiles\gphysics.dir\Intersections.cpp.obj gphysics\CMakeFiles\gphysics.dir\Particle.cpp.obj gphysics\CMakeFiles\gphysics.dir\Shape.cpp.obj gphysics\CMakeFiles\gphysics.dir\ShapeSphere.cpp.obj || _deps\sdl3-build\SDL3.dll gdraw\gdraw.lib gmath\gmath.lib gplatform\gplatform.lib
+build gphysics\gphysics.lib: CXX_STATIC_LIBRARY_LINKER__gphysics_Debug gphysics\CMakeFiles\gphysics.dir\Body.cpp.obj gphysics\CMakeFiles\gphysics.dir\Contact.cpp.obj gphysics\CMakeFiles\gphysics.dir\Intersections.cpp.obj gphysics\CMakeFiles\gphysics.dir\Particle.cpp.obj gphysics\CMakeFiles\gphysics.dir\Shape.cpp.obj gphysics\CMakeFiles\gphysics.dir\ShapeSphere.cpp.obj || _deps\sdl3-build\SDL3.dll gdraw\gdraw.lib gmath\gmath.lib gplatform\gplatform.lib
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = gphysics\CMakeFiles\gphysics.dir
