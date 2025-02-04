@@ -7,11 +7,8 @@ using gphysics::ShapeSphere;
 
 
 void Scene05Bodies::Load(Renderer& renderer) {
-
-
-
     float radius = 10.0f;
-    auto sphere = new SphereCube(renderer, radius);
+    auto sphere = new SphereCube(renderer, 1.0f);
     sphere->Load();
 
     Body body;
@@ -23,7 +20,7 @@ void Scene05Bodies::Load(Renderer& renderer) {
     bodies.push_back(body);
 
     float radius2 = 100.0f;
-    auto sphere2 = new SphereCube(renderer, radius2);
+    auto sphere2 = new SphereCube(renderer, 1000.0f);
     sphere2->Load();
 
     Body earth;

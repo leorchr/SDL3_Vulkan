@@ -1,15 +1,7 @@
 #include "Body.hpp"
-#include "Body.hpp"
-#include "Body.hpp"
-#include "Body.hpp"
-#include "Body.hpp"
-//
-// Created by gaetz on 03/02/2025.
-//
-
-#include "Body.hpp"
 #include "Shape.hpp"
 #include "Drawable.hpp"
+#include "Mat4.hpp"
 
 namespace gphysics {
 
@@ -18,7 +10,6 @@ namespace gphysics {
             orientation{orientation_},
             shape{shape_},
             drawable{drawable_} {
-
     }
 
     Body::Body() :

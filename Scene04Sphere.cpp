@@ -1,7 +1,7 @@
 #include "Scene04Sphere.hpp"
 
 void Scene04Sphere::Load(Renderer& renderer) {
-    sphere = std::make_unique<SphereCube>(renderer);
+    sphere = std::make_unique<SphereCube>(renderer, 1.0f);
     sphere->Load();
 }
 

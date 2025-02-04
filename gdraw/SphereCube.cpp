@@ -1,4 +1,3 @@
-#pragma once
 #include "SphereCube.hpp"
 
 #include <VertexTypes.hpp>
@@ -6,6 +5,8 @@
 
 namespace gdraw
 {
+    SphereCube::SphereCube(Renderer& renderer_, float radius = 1.0f) : material(&renderer_), mesh(&renderer_, radius) {}
+
     void SphereCube::Load() {
         material.LoadVertexShader("PositionNormalTransform.vert", 0, 1, 0, 0);
         material.LoadFragmentShader("ColoredShape.frag", 1, 1, 0, 0);
