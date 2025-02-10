@@ -107,7 +107,7 @@ namespace gdraw {
 
     private:
         Mat4 projection { Mat4::identity };
-        Mat4 view { Mat4::CreateLookAt(Vec {0, 0, 10.0f}, Vec::zero, Vec::up) };
+        Mat4 view { Mat4::CreateLookAt(Vec {0, 0, 100.0f}, Vec::zero, Vec::up) };
     };
 }
 

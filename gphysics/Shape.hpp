@@ -1,5 +1,7 @@
+#include <Mat3.hpp>
 #include <Vec.hpp>
 using gmath::Vec;
+using gmath::Mat3;
 
 #ifndef GPHYSICS_SHAPE_HPP
 #define GPHYSICS_SHAPE_HPP
@@ -14,6 +16,8 @@ namespace gphysics {
 
         [[nodiscard]] virtual ShapeType GetType() const = 0;
         virtual Vec GetCenterOfMass() const { return centerOfMass; }
+
+        virtual Mat3 InertiaTensor() const = 0;
 
     protected:
         Vec centerOfMass;

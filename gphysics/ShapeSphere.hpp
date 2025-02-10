@@ -12,6 +12,7 @@ namespace gphysics {
         }
 
         ShapeType GetType() const override { return ShapeType::SHAPE_SPHERE; }
+        Mat3 InertiaTensor() const override;
         float radius;
     };
 }

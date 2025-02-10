@@ -15,11 +15,14 @@ void Scene05Bodies::Load(Renderer& renderer) {
     sphere->Load();
 
     Body body;
-    body.position = Vec(0, 10, -10);
+    body.position = Vec(0, 10, 0);
     body.orientation = Quat::identity;
     body.shape = new ShapeSphere(1.0f);
     body.drawable = sphere;
     body.inverseMass = 1.0f;
+    body.elasticity = 0.5f;
+    body.friction = 0.5f;
+    body.linearVelocity = Vec(1, 0, 20);
     bodies.push_back(body);
 
     float radius2 = 100.0f;
@@ -27,11 +30,13 @@ void Scene05Bodies::Load(Renderer& renderer) {
     sphere2->Load();
 
     Body earth;
-    earth.position = Vec(0, -1000, -10); 
+    earth.position = Vec(0, -1000, 0);
     earth.orientation = Quat::identity;
     earth.shape = new ShapeSphere(1000.0f);
     earth.drawable = sphere2;
     earth.inverseMass = 0.0f;
+    earth.elasticity = 0.99f;
+    earth.friction = 0.5f;
     bodies.push_back(earth);
 }
 
